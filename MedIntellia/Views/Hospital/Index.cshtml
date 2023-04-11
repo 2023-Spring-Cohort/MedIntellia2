@@ -1,0 +1,9 @@
+﻿@model DataModel.CountriesModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@foreach (var item in Model.data)
+{
+    <h1>@item</h1>
+}

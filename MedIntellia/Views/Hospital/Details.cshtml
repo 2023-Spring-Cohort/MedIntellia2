@@ -1,0 +1,15 @@
+﻿@model List<DataModel.HospitalData>;
+@{
+    ViewData["Title"] = "Hospital Page";
+}
+@*@foreach (var item in Model)
+{
+    <h1>@item</h1>
+}*@
+<h1>Hospital EIN: @Model[0].data_ein</h1>
+<h1>Name: @Model[0].data_name</h1>
+<h1>Address: @Model[0].form_990_address @Model[0].form_990_city @Model[0].form_990_state @Model[0].form_990_zip</h1>
+<h1>Total Revenue: $@Model[0].tot_revenue</h1>
+
+
+

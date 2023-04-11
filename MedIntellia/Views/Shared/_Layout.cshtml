@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device=width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MedIntellia</title>
+    @RenderSection("scripts", required: false)
+    <link rel="stylesheet" href="~/css/HeaderStylesheet .css" asp-append-version="true" />                                     @*----header style only----*@
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <link rel="stylesheet" href="~/css/Map.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+    @*--------------------------------------------------------------------------------------------------------------------SHARED HEADER----------------------------------------------*@
+    <div class="header_block">
+
+        <a asp-area="" asp-controller="" asp-action="Index">
+            <img class="logo" src="~/Images/MedIntellia logo.png" alt="MedIntellia logo" height="40">                                 @*----website logo---*@
+        </a>
+
+        <ul class="ul_nav">
+            <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="AboutUs">ABOUT </a></li>@*----navigation bar with links----*@
+            <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="Services">SERVICES</a></li>
+            <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="LatestNews">NEWS</a></li>
+            <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="ContactUs">CONTACT</a></li>
+            <li id="signup"><a asp-area="Identity" asp-page="/Account/Register">REGISTER</a></li>               @*----navigation bar with links----*@
+            <li id="login"><a asp-area="Identity" asp-page="/Account/Login">LOGIN</a></li>
+        </ul>
+           
+    </div>
+    @*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*@
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>

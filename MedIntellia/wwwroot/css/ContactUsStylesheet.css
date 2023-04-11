@@ -1,0 +1,108 @@
+﻿/* --------------------------------------------------------------------------------------GENERAL PAGE SET UP STYLES---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+body {
+    background-image: url("../Images/Background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Hide vertical scroll during animation */
+}
+/* --------------------------------------------------------------------------------------CONTACT US FORM---------------- */
+
+#contact_page {                     /* contact us page background */
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: center;
+    
+}
+
+.contact_page_title_block {          /* contact us text block */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -200px;
+}
+
+.contact_title_text {               /* contact us text */
+    color: black;
+    font-family: Gotham;
+    font-size: 30px;
+    position: relative;
+    text-align:center;
+}
+
+.contact_form {                     /*main contact form block */
+    display:flex;
+    flex-direction:column;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    top: 50px;
+    
+}
+.name_email {                       /* block for name input and email inpuit on the smae row */
+    display: flex;
+    justify-content:center;
+    width: 700px;
+}
+
+.input_group {                      /* input forms blocks */
+    margin-bottom: 40px;
+    position: relative;
+    width:300px;
+}
+
+.input_group_message { /* input forms blocks */
+    margin-bottom: 30px;
+    position: relative;
+    width: 600px;
+}
+
+input, textarea {                  /* submit button */
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid black;
+    color: black;
+    background: transparent;
+    font-size: 15px;
+}
+
+label {                            /* input text placeholder */
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: black;
+    cursor: text;
+    font-family: Gotham;
+}
+
+button {                            /* input text placeholder */
+    padding: 10px;
+    color: blueviolet;
+    outline: none;
+    background: transparent;
+    border: 1px solid black;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+}
+
+.contact_links {
+    position: relative;
+    top: 100px;
+}
+
+.icon_style_link {
+    padding: 30px;
+}

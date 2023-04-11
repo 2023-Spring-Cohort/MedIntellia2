@@ -1,0 +1,173 @@
+﻿<div id="map3"></div>
+@*<script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSEphaILLzI6VzorNDryPTm0fuW8o0shA&libraries=places&callback=initMap">
+</script>*@
+
+<script type="text/javascript"
+        src="https://maps.google.com/maps/api/js?key=AIzaSyCSEphaILLzI6VzorNDryPTm0fuW8o0shA&sensor=true">
+</script>
+
+<script>
+    var gmarkers = [];
+    var i = 0;
+    var map;
+    function go_to_hospital(j) {
+        google.maps.event.trigger(gmarkers[j], "click");
+        document.getElementById('map3').scrollIntoView();
+    }
+
+    function createMarker(point, text) {
+        var marker = new google.maps.Marker({ position: point});
+        google.maps.event.addListener(marker, "click", function () {
+            var infowindow = new google.maps.InfoWindow({ content: text });
+            infowindow.open(map, marker);
+        });
+        gmarkers[i] = marker;
+        i++
+        return marker;
+    }
+
+
+    function initialize() {
+        //var crossIcon = new google.maps.MarkerImage('/images/icon63.png', new google.maps.Size(32, 32), new google.maps.Point(0, 0), new google.maps.Point(16, 32));
+
+        //var pinIcon = new google.maps.MarkerImage('/images/icon14.png', new google.maps.Size(32, 32), new google.maps.Point(0, 0), new google.maps.Point(16, 32));
+
+
+        var mapOptions = {
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById("map3"), mapOptions);
+        map.setCenter(new google.maps.LatLng(39.7589478, -84.1916069));
+        var point = null
+        var marker;
+
+
+        point = new google.maps.LatLng(39.759055, -84.194439);
+        marker = createMarker(point, '<a href=\"/hospital/Childrens-Medical-Center-Dayton-OH\">Children\'s Medical Center<\/a> <br> One Children\'s Plaza <br> Dayton OH 45404-1815 <br> <a href=\"/hospital/Childrens-Medical-Center-Dayton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.747547, -84.197882);
+        marker = createMarker(point, '<a href=\"/hospital/Dayton-Heart-Hospital-Dayton-OH\">Dayton Heart Hospital<\/a> <br> 707 S Edwin C Moses Boulevard <br> Dayton OH 45408 <br> <a href=\"/hospital/Dayton-Heart-Hospital-Dayton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.769024, -84.202983);
+        marker = createMarker(point, '<a href=\"/hospital/Grandview-Hospital-Med-Ctr-Dayton-OH\">Grandview Hospital & Med Ctr<\/a> <br> 405 Grand Avenue <br> Dayton OH 45405-4796 <br> <a href=\"/hospital/Grandview-Hospital-Med-Ctr-Dayton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.745473, -84.185548);
+        marker = createMarker(point, '<a href=\"/hospital/Miami-Valley-Hospital-Dayton-OH\">Miami Valley Hospital<\/a> <br> One Wyoming Street <br> Dayton OH 45409-2793 <br> <a href=\"/hospital/Miami-Valley-Hospital-Dayton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.745605, -84.200999);
+        marker = createMarker(point, '<a href=\"/hospital/Kindred-Hospital-Dayton-Dayton-OH\">Kindred Hospital-Dayton<\/a> <br> One Elizabeth Place <br> Dayton OH 45408 <br> <a href=\"/hospital/Kindred-Hospital-Dayton-Dayton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.739271, -84.156373);
+        marker = createMarker(point, '<a href=\"/hospital/Twin-Valley-Behavioral-Health-Dayton-OH\">Twin Valley Behavioral Health<\/a> <br> 2611 Wayne Avenue <br> Dayton OH 45420-1800 <br> <a href=\"/hospital/Twin-Valley-Behavioral-Health-Dayton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.787844, -84.234742);
+        marker = createMarker(point, '<a href=\"/hospital/Good-Samaritan-Hospital-Dayton-OH\">Good Samaritan Hospital<\/a> <br> 2222 Philadelphia Drive <br> Dayton OH 45406-1813 <br> <a href=\"/hospital/Good-Samaritan-Hospital-Dayton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.749296, -84.25325);
+        marker = createMarker(point, '<a href=\"/hospital/Veterans-Affairs-Med-Center-Dayton-OH\">Veterans Affairs Med Center<\/a> <br> 4100 West Third Street <br> Dayton OH 45428-1002 <br> <a href=\"/hospital/Veterans-Affairs-Med-Center-Dayton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.697797, -84.190605);
+        marker = createMarker(point, '<a href=\"/hospital/Charles-F-Kettering-Mem-Hosp-Kettering-OH\">Charles F Kettering Mem Hosp<\/a> <br> 3535 Southern Boulevard <br> Kettering OH 45429 <br> <a href=\"/hospital/Charles-F-Kettering-Mem-Hosp-Kettering-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.638526, -84.250114);
+        marker = createMarker(point, '<a href=\"/hospital/LifeCare-Hospital-of-Dayton-Miamisburg-OH\">LifeCare Hospital of Dayton<\/a> <br> 2150 Leiter Road <br> Miamisburg OH 45342 <br> <a href=\"/hospital/LifeCare-Hospital-of-Dayton-Miamisburg-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.638526, -84.250114);
+        marker = createMarker(point, '<a href=\"/hospital/Kettering-Medical-Ctr-Sycamore-Miamisburg-OH\">Kettering Medical Ctr-Sycamore<\/a> <br> 2150 Leiter Road <br> Miamisburg OH 45342 <br> <a href=\"/hospital/Kettering-Medical-Ctr-Sycamore-Miamisburg-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.80548, -84.034939);
+        marker = createMarker(point, '<a href=\"/hospital/Wright-Patterson-Medical-Ctr-Wright-Patterson-Afb-OH\">Wright Patterson Medical Ctr<\/a> <br> 4881 Sugar Maple Drive <br> Wright-Patterson Afb OH 45433-5529 <br> <a href=\"/hospital/Wright-Patterson-Medical-Ctr-Wright-Patterson-Afb-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.69985, -83.928517);
+        marker = createMarker(point, '<a href=\"/hospital/Greene-Memorial-Hospital-Xenia-OH\">Greene Memorial Hospital<\/a> <br> 1141 North Monroe Drive <br> Xenia OH 45385-1600 <br> <a href=\"/hospital/Greene-Memorial-Hospital-Xenia-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.499387, -84.3147897);
+        marker = createMarker(point, '<a href=\"/hospital/Atrium-Medical-Center-Middletown-OH\">Atrium Medical Center<\/a> <br> 1 Medical Center Dr <br> Middletown OH 45005 <br> <a href=\"/hospital/Atrium-Medical-Center-Middletown-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(40.038166, -84.213284);
+        marker = createMarker(point, '<a href=\"/hospital/Upper-Valley-Medical-Center-Troy-OH\">Upper Valley Medical Center<\/a> <br> 3130 North Dixie Highway <br> Troy OH 45373-1309 <br> <a href=\"/hospital/Upper-Valley-Medical-Center-Troy-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.510419, -84.376674);
+        marker = createMarker(point, '<a href=\"/hospital/Middletown-Regional-Hospital-Middletown-OH\">Middletown Regional Hospital - Closed<\/a> <br> 105 Mcknight Drive <br> Middletown OH 45044-4838 <br> <a href=\"/hospital/Middletown-Regional-Hospital-Middletown-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.940639, -83.809055);
+        marker = createMarker(point, '<a href=\"/hospital/Mercy-Medical-Center-Springfield-OH\">Mercy Medical Center<\/a> <br> 1343 North Fountain Boulevard <br> Springfield OH 45501-1380 <br> <a href=\"/hospital/Mercy-Medical-Center-Springfield-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.920129, -83.768904);
+        marker = createMarker(point, '<a href=\"/hospital/Community-Hosp-of-Springfield-Springfield-OH\">Community Hosp of Springfield<\/a> <br> 2615 East High Street <br> Springfield OH 45505-1422 <br> <a href=\"/hospital/Community-Hosp-of-Springfield-Springfield-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.445453, -83.839193);
+        marker = createMarker(point, '<a href=\"/hospital/Clinton-Memorial-Hospital-Wilmington-OH\">Clinton Memorial Hospital<\/a> <br> 610 West Main Street <br> Wilmington OH 45177-0600 <br> <a href=\"/hospital/Clinton-Memorial-Hospital-Wilmington-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.415355, -84.573726);
+        marker = createMarker(point, '<a href=\"/hospital/Fort-Hamilton-Hospital-Hamilton-OH\">Fort Hamilton Hospital<\/a> <br> 630 Eaton Avenue <br> Hamilton OH 45013-2770 <br> <a href=\"/hospital/Fort-Hamilton-Hospital-Hamilton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.378861, -84.513204);
+        marker = createMarker(point, '<a href=\"/hospital/Butler-County-Medical-Center-Hamilton-OH\">Butler County Medical Center<\/a> <br> 3125 Hamilton Mason Road <br> Hamilton OH 45011 <br> <a href=\"/hospital/Butler-County-Medical-Center-Hamilton-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(40.088282, -84.634932);
+        marker = createMarker(point, '<a href=\"/hospital/Wayne-Hospital-Greenville-OH\">Wayne Hospital<\/a> <br> 835 SWeitzer Street <br> Greenville OH 45331-1077 <br> <a href=\"/hospital/Wayne-Hospital-Greenville-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(39.511702, -84.740989);
+        marker = createMarker(point, '<a href=\"/hospital/McCullough-Hyde-Mem-Hospital-Oxford-OH\">McCullough-Hyde Mem Hospital<\/a> <br> 110 North Poplar Street <br> Oxford OH 45056-1292 <br> <a href=\"/hospital/McCullough-Hyde-Mem-Hospital-Oxford-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+        point = new google.maps.LatLng(40.106822, -83.731491);
+        marker = createMarker(point, '<a href=\"/hospital/Mercy-Memorial-Hospital-Urbana-OH\">Mercy Memorial Hospital<\/a> <br> 904 Scioto Street <br> Urbana OH 43078-2200 <br> <a href=\"/hospital/Mercy-Memorial-Hospital-Urbana-OH\">Get details & directions<\/a>');
+        marker.setMap(map);
+
+
+
+        point = new google.maps.LatLng(39.7589478, -84.1916069)
+
+        marker = createMarker(point, 'dayton ohio<br>Found 24 hospital(s) within 30 miles');
+        marker.setMap(map);
+        var infowindow = new google.maps.InfoWindow({ content: 'dayton ohio<br>Found 24 hospital(s) within 30 miles' })
+        infowindow.open(map, marker);
+
+    }
+    console.log("test");
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+<form action="/hospitals/search" method="get" onsubmit="return submitSearchForm($('search_query').value+' USA');">
+    <b>Location:</b> <input id="search_query" name="search_query" size="65" type="text" value="" />
+    <input id="lat" name="lat" type="hidden" />
+    <input id="lng" name="lng" type="hidden" />
+    <input id="cgeo" name="cgeo" type="hidden" />
+    <input name="commit" type="submit" value="Search" />
+</form>
+
+<script type="text/javascript">
+    function submitSearchForm(location) {
+        getLocationFromGoogle(location);
+        return false;
+    }
+</script>

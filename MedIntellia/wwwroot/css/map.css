@@ -1,0 +1,230 @@
+﻿#map {
+    height: 500px; /* The height is 400 pixels */
+    width: 750px; /* The width is the width of the web page */
+}
+
+#map2 {
+    height: 500px; /* The height is 400 pixels */
+    width: 750px; /* The width is the width of the web page */
+}
+
+#map3 {
+    height: 500px; /* The height is 400 pixels */
+    width: 750px; /* The width is the width of the web page */
+}
+
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map4 {
+    height: 500px; /* The height is 400 pixels */
+    width: 750px; /* The width is the width of the web page */
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+
+table {
+    font-size: 12px;
+}
+
+#hospital-search {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 6px;
+    /*    justify-content:revert;
+    margin-right: 310px;*/
+    position: absolute;
+    top: 0;
+    width: 480px;
+    z-index: 1;
+}
+
+.hospital-search-index {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 6px;
+    /*    justify-content:revert;
+    margin-right: 50%;*/
+    position: absolute;
+    top: 0;
+    width: 530px;
+    z-index: 1;
+}
+#map_container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#map {
+    margin-top: 40px;
+    width: 440px;
+
+}
+
+#listing {
+/*position: absolute;*/
+    display:none;
+    width: 300px;
+    height: 500px;
+    overflow: auto;
+    top: 0px;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+
+#findhospitals {
+    font-size: 14px;
+}
+
+#locationField {
+    -webkit-box-flex: 1 1 190px;
+    -ms-flex: 1 1 190px;
+    flex: 1 1 190px;
+    margin: 0 8px;
+}
+
+#controls {
+    -webkit-box-flex: 1 1 140px;
+    -ms-flex: 1 1 140px;
+    flex: 1 1 140px;
+}
+
+#autocomplete {
+    width: 100%;
+}
+
+#country {
+    width: 100%;
+}
+
+.placeIcon {
+    width: 20px;
+    height: 34px;
+    margin: 4px;
+}
+
+.hospitalIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#resultsTable {
+    border-collapse: collapse;
+    width: 290px;
+}
+
+#rating {
+    font-size: 13px;
+    font-family: Arial Unicode MS;
+}
+
+.iw_table_row {
+    height: 18px;
+}
+
+.iw_attribute_name {
+    font-weight: bold;
+    text-align: right;
+}
+
+.iw_table_icon {
+    text-align: right;
+}
+
+
+
+
+/*-------------ADDED FROM INDEXSTYLESHEET-----------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a:hover {
+    cursor: default;
+}
+/* --------------------------------------------------------------------------------------------HEADER STYLES------------------------ */
+.header_block {
+    padding-top: 20px;
+}
+
+/* ------------------------------------------------------------------------------------------NAV BAR LINKS STYLES------------------- */
+
+ul {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+}
+
+    ul li {
+        display: inline-block;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 24px;
+        font-family: arial;
+        position: relative;
+        margin: 10px
+    }
+
+        ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        ul li:before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 20px;
+            left: 0;
+            top: 0;
+            border-top: 5px solid #e84393;
+            border-left: 5px solid #e84393;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        ul li:hover:before {
+            opacity: 1;
+            left: -10px;
+            top: -10px;
+        }
+
+        ul li:after {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 20px;
+            right: 0;
+            bottom: 0;
+            border-bottom: 5px solid #6c5ce7;
+            border-right: 5px solid #6c5ce7;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        ul li:hover:after {
+            opacity: 1;
+            right: -10px;
+            bottom: -10px;
+        }
