@@ -24,7 +24,7 @@ body {
 
 .story {
     position: fixed;
-    top: 100px;
+    top: 130px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;

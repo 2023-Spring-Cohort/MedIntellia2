@@ -29,7 +29,7 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    top: -200px;
+    top: -100px;
 }
 
 .contact_title_text {               /* contact us text */
@@ -48,9 +48,9 @@ body {
     background-color: gray;
     padding: 20px;
     width: 500px;
-    height: 500px;
+    height: 580px;
     position: relative;
-    top: -180px;
+    top: -60px;
 }
 
 

@@ -1,0 +1,70 @@
+﻿/* --------------------------------------------------------------------------------------GENERAL PAGE SET UP STYLES---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+body {
+    background-image: url("../Images/Background2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Hide vertical scroll during animation */
+}
+/* --------------------------------------------------------------------------------------LOG IN STYLES---------------- */
+.login_title {
+    display:flex;
+    justify-content:center;
+}
+
+.row{
+    display:flex;
+   /* background-color:bisque;*/
+    justify-content:center;
+}
+
+.col-md-4 {
+    background-color: gray;
+    padding: 20px;
+    width: 500px;
+    height: 350px;
+}
+
+.form-floating {
+    width: 100%;
+    border-bottom: 4px solid white;
+    padding-top: 60px;
+    
+}
+.form-label {
+    color:white;
+    float:left;
+}
+.form-control {
+    background-color: transparent;
+    border:none;
+}
+
+.register_link {
+    display: flex;
+    justify-content: center;
+    color: white;
+    position: relative;
+    top: 40px;
+    text-decoration: none;
+}
+
+#login-submit { /* input text placeholder */
+    padding: 25px;
+    color: white;
+    outline: none;
+    background: rgb(164, 124, 246);
+    border: 2px solid rgb(164, 124, 246);
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    top: 40px;
+}

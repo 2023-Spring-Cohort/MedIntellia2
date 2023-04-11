@@ -18,7 +18,7 @@
 <body class="container">
 
     <!-- -----------------------------------------------------------------------------------------------------------SEARCH BAR--------------------------------------------- -->
-@*    <form>
+    <form>
         <input type="text" id="search" placeholder="Search..." autocomplete="off">
 
         <select id="country">
@@ -28,7 +28,9 @@
         </select>
 
         <button type="button" onclick="search()">Search</button>
-    </form>*@
+    </form>
+
+
     <form asp-action="map4" method="get">
     <div class="hospital-search-index">
         <div id="findhospitals">Find hospitals in:</div>
@@ -98,6 +100,8 @@
 
     </form>
     <!-- ----------------------------------------------------------------------------------------------------------MISSION STATEMENT----------------------------------------------- -->
+
+    <img class="logo" src="~/Images/MedIntellia logo.png" alt="MedIntellia logo" height="80">
 
     <div class="mission_box animated">
         <p class="mission_statement_paragraph">
