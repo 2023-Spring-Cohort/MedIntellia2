@@ -4,7 +4,7 @@
 
 
 body {
-    background-image: url("../Images/Background1.jpg");
+    background-image: url("../Images/Background2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -20,6 +20,7 @@ body {
     flex-direction: column;
     height: 1000px;
     justify-content: center;
+    align-items:center;
     
 }
 
@@ -39,70 +40,68 @@ body {
     text-align:center;
 }
 
-.contact_form {                     /*main contact form block */
-    display:flex;
-    flex-direction:column;
-    width: 90%;
-    max-width: 600px;
+
+
+
+
+.form_block {
+    background-color: gray;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
     position: relative;
-    top: 50px;
-    
-}
-.name_email {                       /* block for name input and email inpuit on the smae row */
-    display: flex;
-    justify-content:center;
-    width: 700px;
+    top: -180px;
 }
 
-.input_group {                      /* input forms blocks */
-    margin-bottom: 40px;
-    position: relative;
-    width:300px;
-}
 
-.input_group_message { /* input forms blocks */
-    margin-bottom: 30px;
-    position: relative;
-    width: 600px;
-}
 
-input, textarea {                  /* submit button */
+.form-group_name {
     width: 100%;
+    border-bottom: 4px solid white;
+    padding-top: 40px;
+}
+.form-group_subject {
+    width: 100%;
+    border-bottom: 4px solid white;
+    padding-top: 60px;
+}
+.form-group_email {
+    width: 100%;
+    border-bottom: 4px solid white;
+    padding-top: 40px;
+}
+.form-group_message {
+    width: 100%;
+    border-bottom: 4px solid white;
+    padding-top: 40px;
+}
+
+
+
+input, textarea { /* all inpuut style */
+    width: 97%;
     padding: 10px;
-    outline: 0;
-    border: 1px solid black;
-    color: black;
-    background: transparent;
+    /*border-bottom: 4px solid black;*/
     font-size: 15px;
+    background-color:transparent;
+    border:none;
 }
 
-label {                            /* input text placeholder */
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 10px;
-    color: black;
-    cursor: text;
-    font-family: Gotham;
+::placeholder{
+    color:white;
 }
 
-button {                            /* input text placeholder */
-    padding: 10px;
-    color: blueviolet;
+
+button { /* input text placeholder */
+    padding: 25px;
+    color: white;
     outline: none;
-    background: transparent;
-    border: 1px solid black;
+    background: rgb(164, 124, 246);
+    border: 2px solid rgb(164, 124, 246);
     width: 100%;
     cursor: pointer;
     align-items: center;
-}
-
-.contact_links {
     position: relative;
-    top: 100px;
+    top: 40px;
 }
 
-.icon_style_link {
-    padding: 30px;
-}

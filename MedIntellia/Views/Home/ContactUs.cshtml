@@ -1,43 +1,34 @@
-﻿
-
+﻿@model SendMailDto
+@{
+    ViewData["Title"] = "Contact Us ";
+}
+<h1>@ViewBag.Message</h1>
 <link rel="stylesheet" href="~/css/ContactUsStylesheet.css" asp-append-version="true" />
-<link rel="stylesheet" href="~/css/IndexStylesheet.css" asp-append-version="true" />@*--------------------------------------(styles both contact and shared header)---------*@
-<link rel="stylesheet" href="~/css/HeaderStylesheet .css" asp-append-version="true" />@*----header style only----*@
 <!-- ----------------------------------------------------------------------------------------------------------CONTACT FORM---------------------------------------------------- -->
-<body class="contactus_body">      
+<body class="contactus_body">
     <div id="contact_page">
-
-
-            <div class="contact_page_title_block">
-                <h2 class="contact_title_text">Contact Us</h2>                          <!-- simple page title -->
-            </div>
-
-            <form class="contact_form">                                                 <!-- contact form -->
-                <div class="name_email">
-                    <div class="input_group">
-                        <input type="text" id="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="input_group">
-                        <input type="text" id="email" required>
-                        <label for="name">Your Email</label>
-                    </div>
-                </div>
-                <div class="input_group_message">
-                    <textarea id="message" rows="8"></textarea>
-                    <label for="name">Your Message</label>
-                </div>
-                <button type="submit">SUBMIT</button>
-            </form>
-
-        <div class="contact_links">                                                       <!-- social media links -->
-                <img class="icon_style_link" src="~/Images/Github Icon.png" alt="GitHub Icon" height="50px" width="50px">
-                <img class="icon_style_link" src="~/Images/Email Icon.png" alt="Email Icon" height="50px" width="50px">
-                <img class="icon_style_link" src="~/Images/LinkedIn Icon.png" alt="LinkedIn Icon" height="50px" width="50px">
-            </div>
+        <div class="contact_page_title_block">
+            <h2 class="contact_title_text">Contact Us</h2>                          <!-- simple page title -->
         </div>
+        <form class="form_block" method="post">
+            <div class="form-group_name">
+                <input type="text" asp-for="@Model.Name" class="form-control" placeholder="Name">
+                <span class="text-danger" asp-validation-for="@Model.Name"></span>
+            </div>
+            <div class="form-group_subject">
+                <input type="text" asp-for="@Model.Subject" class="form-control" placeholder="Subject">
+                <span class="text-danger" asp-validation-for="@Model.Subject"></span>
+            </div>
+            <div class="form-group_email">
+                <textarea class="form-control" asp-for="@Model.Email" placeholder="Email"></textarea>
+                <span class="text-danger" asp-validation-for="@Model.Email"></span>
+            </div>
+            <div class="form-group_message">
+                <textarea class="form-control" asp-for="@Model.Message" placeholder="Message"></textarea>
+                <span class="text-danger" asp-validation-for="@Model.Message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">SEND</button>
+        </form>
+    </div>
 </body>
-
-
 <!-- --------------------------------------------------------------------------------------------------------------FOOTER---------------------------------------------------- -->
-
