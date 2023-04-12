@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url("../Images/Background1.jpg");
+    background-image: url("../Images/Background2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -95,6 +95,14 @@ ul {
 
 
 /* ------------------------------------------------------------------------------------------SEARCH BAR STYLES------------------- */
+.logo {
+    position: relative;
+    right: -630px;
+    position: relative;
+    top: 90px;
+}
+
+
 /* Style the search bar container */
 .search-container {
     display: flex;

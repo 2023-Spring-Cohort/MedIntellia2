@@ -27,9 +27,11 @@ body {
 
 .col-md-4 {
     background-color: gray;
-    padding: 20px;
+    padding: 15px;
     width: 500px;
-    height: 350px;
+    height: 380px;
+    position: relative;
+    top: 40px;
 }
 
 .form-floating {
