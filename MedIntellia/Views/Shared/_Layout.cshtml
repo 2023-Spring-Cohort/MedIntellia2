@@ -1,33 +1,51 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device=width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MedIntellia</title>
     @RenderSection("scripts", required: false)
-    <link rel="stylesheet" href="~/css/HeaderStylesheet .css" asp-append-version="true" />                              @*----header style only----*@
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <link rel="stylesheet" href="~/css/Map.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/HeaderStylesheet .css" asp-append-version="true" />                                     @*----header style only----*@
 </head>
 
 <body>
     @*--------------------------------------------------------------------------------------------------------------------SHARED HEADER----------------------------------------------*@
     <div class="header_block">
 
-@*        <a asp-area="" asp-controller="" asp-action="Index">
-            <img class="logo" src="~/Images/MedIntellia logo.png" alt="MedIntellia logo" height="40">                         
+        @* <a href="#">
+        <img class="logo" src="~/Images/MedIntellia logo.png" alt="MedIntellia logo" height="40">
         </a>*@
 
         <ul class="ul_nav">
-            <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="Index">HOME</a></li>
-            <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="AboutUs">ABOUT </a></li>@*----navigation bar with links----*@      
+            <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="AboutUs">ABOUT </a></li>@*----navigation bar with links----*@
+            <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="Services">SERVICES</a></li>
             <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="LatestNews">NEWS</a></li>
             <li><a class="nav_link nav_link1" asp-area="" asp-controller="" asp-action="ContactUs">CONTACT</a></li>
-            <li id="signup"><a asp-area="Identity" asp-page="/Account/Register">REGISTER</a></li>               @*----navigation bar with links----*@
-            <li id="login"><a asp-area="Identity" asp-page="/Account/Login">LOGIN</a></li>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                    </form>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                </li>
+            }
         </ul>
-           
+
     </div>
     @*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*@
     <div class="">
