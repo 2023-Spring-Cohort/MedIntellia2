@@ -34,8 +34,6 @@ body {
 
 .contact_title_text {               /* contact us text */
     color: black;
-    font-family: Gotham;
-    font-size: 30px;
     position: relative;
     text-align:center;
 }

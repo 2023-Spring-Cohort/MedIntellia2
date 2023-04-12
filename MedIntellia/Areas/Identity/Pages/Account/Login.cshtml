@@ -9,11 +9,15 @@
 <link rel="stylesheet" href="~/css/LogIn.css" asp-append-version="true" />@*-------------------------------------------LogIn style only----------------------*@
 
 <h1 class="login_title">@ViewData["Title"]</h1>
+
 <div class="row">
 
     <div class="col-md-4">
+
         <section class="section">
+
             <form id="account" method="post">
+
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <div class="form-floating">
@@ -52,8 +56,11 @@
                     <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
                     </p>*@
                 </div>
+
             </form>
+
         </section>
+
     </div>
 
 </div>

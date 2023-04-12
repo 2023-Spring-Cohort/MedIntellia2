@@ -11,17 +11,18 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* Hide vertical scroll during animation */
+     Hide vertical scroll during animation 
 }
-/* --------------------------------------------------------------------------------------REGISTER STYLES---------------- */
-.login_title {
-    display:flex;
-    justify-content:center;
+/*--------------------------------------------------------------------------------------REGISTER STYLES----------------*/
+.page_title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
 }
 
 .row{
     display:flex;
-   /* background-color:bisque;*/
     justify-content:center;
 }
 
@@ -29,7 +30,9 @@ body {
     background-color: gray;
     padding: 20px;
     width: 500px;
-    height: 350px;
+    height: 420px;
+    position: relative;
+    top: 100px;
 }
 
 .form-floating {
@@ -57,7 +60,7 @@ body {
     text-decoration: none;
 }
 
-#login-submit { /* input text placeholder */
+#registerSubmit  { /* input text placeholder */
     padding: 25px;
     color: white;
     outline: none;

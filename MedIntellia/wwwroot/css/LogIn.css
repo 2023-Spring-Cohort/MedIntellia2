@@ -15,8 +15,10 @@ body {
 }
 /* --------------------------------------------------------------------------------------LOG IN STYLES---------------- */
 .login_title {
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
 }
 
 .row{
@@ -29,9 +31,9 @@ body {
     background-color: gray;
     padding: 15px;
     width: 500px;
-    height: 380px;
+    height: 350px;
     position: relative;
-    top: 40px;
+    top: 100px;
 }
 
 .form-floating {
@@ -52,9 +54,9 @@ body {
 .register_link {
     display: flex;
     justify-content: center;
-    color: white;
+    color: black;
     position: relative;
-    top: 40px;
+    top: 70px;
     text-decoration: none;
 }
 
