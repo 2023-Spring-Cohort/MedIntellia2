@@ -24,7 +24,7 @@ body {
 
 .story {
     position: fixed;
-    top: 130px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -697,14 +697,15 @@ page_body {
 }
 
 .container {
-    padding: 10px 40px;
+    padding: 20px 40px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 0;
     right: 0;
+
 }
 
 .card {
@@ -713,7 +714,7 @@ page_body {
     margin: 0 20px;
     transition: 1s;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     position: relative;
     background-color: #e0e0e0;
 }
