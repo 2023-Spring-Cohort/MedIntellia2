@@ -1,0 +1,12 @@
+﻿
+@model DataModel.NewsModel
+@{
+    ViewData["News"]="index";
+}
+
+<h1>News</h1>
+@foreach(var a in Model.articles)
+{
+    @a.title<br />
+}
+
