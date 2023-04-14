@@ -25,6 +25,24 @@ namespace MedIntellia.Controllers
             return View(newsList);
 
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(string Author)
+        {
+            Article Model = new Article();
+            var list = await _news.GetNewsAsync("US", 1);
+            var articles = list.articles;
+            foreach(var a in articles)
+            {
+                if(a.author == Author)
+                {
+                    Model = a;
+                    break;
+                }
+
+            }
+            return View (Model);
+        }
     }
 }
 

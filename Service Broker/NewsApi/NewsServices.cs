@@ -1,5 +1,6 @@
 ﻿using DataModel;
 using NewsAPI.Models;
+using Newtonsoft.Json;
 
 namespace Service_Broker.NewsApi
 {
@@ -15,22 +16,28 @@ namespace Service_Broker.NewsApi
 
         public async Task<NewsModel> GetNewsAsync(string country, int pageNumber)
         {
-            string queryString = $"?country={country}&apiKey=8aad4f749acc42569b7a2f187088237e&Page={pageNumber}";
-            //?country ={ default}
-            //&apiKey ={ 8aad4f749acc42569b7a2f187088237e}
-            NewsModel retValue = new NewsModel();
-            try
+            NewsModel retValue = null;
+            using (StreamReader r = new StreamReader(@"Data\NewsJson.json"))
             {
-
-                HttpResponseMessage? response = await httpClient.GetAsync($"https://newsapi.org/v2/top-headlines?country=US&apiKey=8aad4f749acc42569b7a2f187088237e&Page=1");
-                retValue = await response.ReadContentAsync<NewsModel>();
-
+                string json = r.ReadToEnd();
+                retValue = JsonConvert.DeserializeObject<NewsModel>(json);
             }
-            catch (Exception ex)
-            {
+            //string queryString = $"?country={country}095cc7074c704ed98af13b157f821b1f&apiKey=&Page={pageNumber}";
+            ////?country ={ default}
+            ////&apiKey ={ 8aad4f749acc42569b7a2f187088237e}
+            //NewsModel retValue = new NewsModel();
+            //try
+            //{
 
-                throw ex;
-            }
+        //        HttpResponseMessage? response = await httpClient.GetAsync($"https://newsapi.org/v2/top-headlines?country=US&apiKey=095cc7074c704ed98af13b157f821b1f&Page=1");
+        //        retValue = await response.ReadContentAsync<NewsModel>();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        throw ex;
+        //    }
             return retValue;
         }
 

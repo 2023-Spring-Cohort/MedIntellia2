@@ -7,6 +7,7 @@
 <h1>News</h1>
 @foreach(var a in Model.articles)
 {
-    @a.title<br />
+    @a.title <a asp-action="Details" asp-controller="News" asp-route-author="@a.author">@a.author</a>
+    <br />
 }
 

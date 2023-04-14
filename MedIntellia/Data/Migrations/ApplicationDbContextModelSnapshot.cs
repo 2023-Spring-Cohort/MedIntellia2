@@ -45,7 +45,7 @@ namespace MedIntellia.Data.Migrations
 
                     b.HasKey("Title");
 
-                    b.ToTable("ArticleModel");
+                    b.ToTable("ArticleModel", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
