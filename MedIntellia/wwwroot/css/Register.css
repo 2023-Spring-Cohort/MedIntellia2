@@ -30,7 +30,7 @@ body {
     background-color: gray;
     padding: 20px;
     width: 500px;
-    height: 420px;
+    height: 360px;
     position: relative;
     top: 100px;
 }
@@ -71,4 +71,8 @@ body {
     align-items: center;
     position: relative;
     top: 40px;
+}
+
+.form-control:focus {
+    outline: none;
 }
