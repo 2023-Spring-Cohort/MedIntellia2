@@ -101,3 +101,7 @@ button { /* input text placeholder */
     top: 40px;
 }
 
+.form-control:focus {
+    outline: none;
+}
+

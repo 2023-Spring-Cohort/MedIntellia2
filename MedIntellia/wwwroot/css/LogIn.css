@@ -31,7 +31,7 @@ body {
     background-color: gray;
     padding: 15px;
     width: 500px;
-    height: 350px;
+    height: 360px;
     position: relative;
     top: 100px;
 }
@@ -42,13 +42,26 @@ body {
     padding-top: 60px;
     
 }
+.form-label_remember {
+    color: white;
+    float: left;
+    border: none;
+    
+}
 .form-label {
-    color:white;
-    float:left;
+    color: white;
+    float: left;
+    border: none;
+    position: relative;
+    top: 20px;
 }
 .form-control {
     background-color: transparent;
-    border:none;
+    border: none;
+    height: 50px;
+    width: 80%;
+    color:white;
+
 }
 
 .register_link {
@@ -71,4 +84,8 @@ body {
     align-items: center;
     position: relative;
     top: 40px;
+}
+
+.form-control:focus {
+    outline: none;
 }
