@@ -1,6 +1,7 @@
 using MedIntellia.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Service_Broker.NewsApi;
 using Service_Broker.Public;
 using Service_Broker.RapidAPI;
 
@@ -26,6 +27,9 @@ builder.Services.AddHttpClient<IGeoCoderService, GeoCoderService>(c =>
     c.BaseAddress = new Uri("https://geocode.maps.co/search");
 });
 
+builder.Services.AddHttpClient<INewsServices, NewsServices>();
+
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
@@ -34,6 +38,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -63,3 +68,6 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+
+
+
