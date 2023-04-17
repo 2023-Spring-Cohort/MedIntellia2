@@ -4,7 +4,13 @@
     ViewData["News"]="index";
 }
 
-<h1>News</h1>
+<link rel="stylesheet" href="~/css/HeaderStylesheet .css" asp-append-version="true" />@*-------------------------------------------header style only----------------------*@
+<link rel="stylesheet" href="~/css/News.css" asp-append-version="true" />@*------------------------------------------ News style only----------------------*@
+
+
+
+
+<h1 class="news_title">News</h1>
 @foreach(var a in Model.articles)
 {
     @a.title <a asp-action="Details" asp-controller="News" asp-route-author="@a.author">@a.author</a>
