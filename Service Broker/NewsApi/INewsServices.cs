@@ -10,7 +10,7 @@ namespace Service_Broker.NewsApi
 {
     public interface INewsServices
     {
-        Task<NewsModel> GetNewsAsync(string country, int pageSize);
+        Task<NewsModel> GetNewsAsync(string country, string category, int pageSize);
         Task GetTopHeadlinesAsync(TopHeadlinesRequest topHeadlinesRequest);
     }
 }

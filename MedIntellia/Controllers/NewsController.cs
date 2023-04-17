@@ -19,7 +19,7 @@ namespace MedIntellia.Controllers
         {
             _logger.LogInformation("Getting top headlines from NewsAPI...");
 
-            NewsModel newsList = await _news.GetNewsAsync("US", 1);
+            NewsModel newsList = await _news.GetNewsAsync("US","Health", 1);
             //_logger.LogInformation($"Successfully retrieved {newsList.Count} news articles." );
 
             return View(newsList);
@@ -30,7 +30,7 @@ namespace MedIntellia.Controllers
         public async Task<IActionResult> Details(string Author)
         {
             Article Model = new Article();
-            var list = await _news.GetNewsAsync("US", 1);
+            var list = await _news.GetNewsAsync("US", "Health", 1);
             var articles = list.articles;
             foreach(var a in articles)
             {
