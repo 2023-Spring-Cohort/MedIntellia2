@@ -14,7 +14,7 @@ namespace Service_Broker.NewsApi
             this.httpClient = httpClient;
         }
 
-        public async Task<NewsModel> GetNewsAsync(string country, int pageNumber)
+        public async Task<NewsModel> GetNewsAsync(string country, string category, int pageNumber)
         {
             NewsModel retValue = null;
             using (StreamReader r = new StreamReader(@"Data\NewsJson.json"))
@@ -29,7 +29,7 @@ namespace Service_Broker.NewsApi
             //try
             //{
 
-        //        HttpResponseMessage? response = await httpClient.GetAsync($"https://newsapi.org/v2/top-headlines?country=US&apiKey=095cc7074c704ed98af13b157f821b1f&Page=1");
+          //     HttpResponseMessage? response = await httpClient.GetAsync($"https://newsapi.org/v2/top-headlines?country=US&category=health&apiKey=095cc7074c704ed98af13b157f821b1f&Page=1");
         //        retValue = await response.ReadContentAsync<NewsModel>();
 
         //    }
