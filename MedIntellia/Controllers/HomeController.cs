@@ -6,6 +6,9 @@ using Service_Broker.RapidAPI;
 using System.Diagnostics;
 using System.Net.Mail;
 using System.Net;
+using Microsoft.IdentityModel.Tokens;
+using ServiceStack;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MedIntellia.Controllers
 {
@@ -21,7 +24,7 @@ namespace MedIntellia.Controllers
             this.advice = advice;
             this.country = country;
         }
-
+        [Authorize]
         public async Task<ActionResult> Index()
         {
             return View();
@@ -31,7 +34,6 @@ namespace MedIntellia.Controllers
         public async Task<ActionResult> Map4()
         {
             return View($"../Hospital/map4");
-
         }
 
         public async Task<ActionResult> Advice()
@@ -71,9 +73,9 @@ namespace MedIntellia.Controllers
             {
                 MailMessage mail = new MailMessage();
                 // you need to enter your mail address
-                mail.From = new MailAddress("michaelakahotboy59@gmail.com");
+                mail.From = new MailAddress("admin@medintellia.com");
                 //To Email Address - your need to enter your to email address
-                mail.To.Add("michael.javier.gonzalez@outlook.com");
+                mail.To.Add("mcowdery@gmail.com");
                 mail.Subject = sendMailDto.Subject;
                 //you can specify also CC and BCC - i will skip this
                 //mail.CC.Add("");
@@ -87,7 +89,7 @@ namespace MedIntellia.Controllers
                 //you need to pass mail server address and you can also specify the port number if you required
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
                 //Create nerwork credential and you need to give from email address and password
-                NetworkCredential networkCredential = new NetworkCredential("michaelakahotboy59@gmail.com", "nsxvefbdyfqovguv");
+                NetworkCredential networkCredential = new NetworkCredential("mcowdery@gmail.com", "qozerfhgahcsuare");
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = networkCredential;
                 smtpClient.Port = 587; // this is default port number - you can also change this
