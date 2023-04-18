@@ -27,44 +27,46 @@ body {
     justify-content:center;
 }
 
-.col-md-4 {
+.col-md-4 { /* gray rectangle*/
     background-color: gray;
     padding: 15px;
     width: 500px;
-    height: 360px;
+    height: 400px;
     position: relative;
     top: 100px;
 }
 
-.form-floating {
+.form-floating { /* email and password blocks;*/
     width: 100%;
     border-bottom: 4px solid white;
     padding-top: 60px;
-    
 }
-.form-label_remember {
+.form-label_remember { /* remember me link and button;*/
     color: white;
     float: left;
     border: none;
-    
 }
-.form-label {
+.form-label { /* email and password text labelon the left*/
     color: white;
     float: left;
     border: none;
     position: relative;
     top: 20px;
 }
-.form-control {
+.form-control { /* binput text color when typing*/
     background-color: transparent;
     border: none;
     height: 50px;
-    width: 80%;
-    color:white;
-
+    padding-left:10px;
+    padding-top: 12px;
+    color: white;
 }
 
-.register_link {
+.form-control:-webkit-autofill { 
+   background-color:gray;
+}
+
+.register_link { /* register as new user below text*/
     display: flex;
     justify-content: center;
     color: black;
@@ -73,7 +75,7 @@ body {
     text-decoration: none;
 }
 
-#login-submit { /* input text placeholder */
+#login-submit { /* log  in button  */
     padding: 25px;
     color: white;
     outline: none;
