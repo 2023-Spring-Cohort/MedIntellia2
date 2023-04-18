@@ -14,16 +14,37 @@
 }
 
 .ul_nav {
-    display:flex;
+    display: flex;
     top: 60px;
-    width: 800px;
+    /*background-color: green;*/
 }
 
-ul {
+/*ul {
     list-style: none;
+    background-color: green;
+}*/
+
+.logout_button { /* log  in button  */
+    padding: 15px;
+    margin:25px;
+    color: white;
+    outline: none;
+    background: rgb(164, 124, 246);
+    border: 2px solid rgb(164, 124, 246);
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    right: -350px;
+}
+
+
+.hello_login_block {
+    color:red;
 }
 
 ul a {
+    display:flex;
     color: green;
     text-decoration: none;
 }
