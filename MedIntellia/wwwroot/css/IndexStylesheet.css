@@ -22,7 +22,7 @@ body {
 /* ------------------------------------------------------------------------------------------MAIN LOGO--------------------------- */
 .logo {
     position: relative;
-    right: -550px;
+    right: -810px !important;
     position: relative;
     top: 90px;
 }
